@@ -1,0 +1,69 @@
+\documentclass[oneside]{Style/cugthesis}%
+% \documentclass[twoside]{Style/cugthesis}%
+\usepackage{caption}
+\usepackage[super,numbers, list,table,math]{Style/artratex}
+
+\usepackage{Style/artracom}% user defined commands
+
+\input{Tex/Frontinfo}
+\begin{document}
+
+% 关于 \frontmatter 相关命令解释：https://www.zhihu.com/question/56203547
+\frontmatter% initialize the environment
+
+%%%%%%%%%%%%%%%%%%% Title page, declaration, author CV, abstract %%%%%%%%%%%
+\input{Tex/Frontmatter}
+\input{Tex/cv}
+\input{Tex/Abstract}
+
+%%%%%%%%%%%%%%%%%%% Table of content %%%%%%%%%%%%%%%%%%%%%%%
+{
+\linespread{1.2}% local line space
+\contenttobmk
+\newpage
+
+\begin{center}
+\tableofcontents
+\end{center}
+
+% \intobmk*{\cleardoublepage}{图表目录}
+% \pagestyle{noheaderstyle}
+% \input{Tex/figuretable}
+% \thispagestyle{empty}
+
+% \input{Tex/Prematter}% symbol list, preface content
+}
+
+\mainmatter% initialize the environment
+
+\input{Tex/Mainmatter}% !!! MAIN CONTENT
+
+\intotoc*{\cleardoublepage}{\bibname}% add link to toc
+\artxifstreq{\artxbib}{bibtex}{% enable bibtex
+    \bibliography{Biblio/ref}% bibliography
+}{%
+    \printbibliography% bibliography
+}
+
+\cleardoublepage[plain]%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  appendix %%%%%%%%%%%%%%
+% \appendix% initialize the environment
+% \input{Tex/Appendix}% appendix content
+
+\backmatter% initialize the environment
+\input{Tex/Backmatter}% other information
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------------%
+

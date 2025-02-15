@@ -1,0 +1,51 @@
+\stepcounter{app}
+\setcounter{app_fig}{1}
+\setcounter{app_tab}{1}
+\setcounter{equation}{0}
+\renewcommand\theequation{附\arabic{app}-\arabic{equation}}
+% \renewcommand\theequation{\Alph{app}.\arabic{equation}}
+\renewcommand\chaptername{附录}
+\renewcommand\chaptername{Appendix} 
+\renewcommand\thechapter{附录\zhnum{app}} 
+
+\setcounter{chapter}{0}
+\setcounter{section}{0}
+\chapter{附录中的公式}\label{chap:app1}{
+
+%%% START HERE
+\begin{equation} \label{eq:appedns}
+    % \adddotsbeforeeqnnum%
+    \begin{cases}
+        \frac{\partial \rho}{\partial t} + \nabla\cdot(\rho\Vector{V}) = 0\\
+        \frac{\partial (\rho\Vector{V})}{\partial t} + \nabla\cdot(\rho\Vector{V}\Vector{V}) = \nabla\cdot\Tensor{\sigma}\\
+        \frac{\partial (\rho E)}{\partial t} + \nabla\cdot(\rho E\Vector{V}) = \nabla\cdot(k\nabla T) + \nabla\cdot(\Tensor{\sigma}\cdot\Vector{V})
+    \end{cases}
+\end{equation}
+
+\begin{equation} \label{eq:appedns2}
+    % \adddotsbeforeeqnnum%
+    \begin{cases}
+        \frac{\partial \rho}{\partial t} + \nabla\cdot(\rho\Vector{V}) = 0\\
+        \frac{\partial (\rho\Vector{V})}{\partial t} + \nabla\cdot(\rho\Vector{V}\Vector{V}) = \nabla\cdot\Tensor{\sigma}\\
+        \frac{\partial (\rho E)}{\partial t} + \nabla\cdot(\rho E\Vector{V}) = \nabla\cdot(k\nabla T) + \nabla\cdot(\Tensor{\sigma}\cdot\Vector{V})
+    \end{cases}
+\end{equation}
+
+
+mathtext: $A,F,L,2,3,5,\sigma$, mathnormal: $A,F,L,2,3,5,\sigma$, mathrm: $\mathrm{A,F,L,2,3,5,\sigma}$.
+
+mathbf: $\mathbf{A,F,L,2,3,5,\sigma}$, mathit: $\mathit{A,F,L,2,3,5,\sigma}$, mathsf: $\mathsf{A,F,L,2,3,5,\sigma}$.
+
+mathtt: $\mathtt{A,F,L,2,3,5,\sigma}$, mathfrak: $\mathfrak{A,F,L,2,3,5,\sigma}$, mathbb: $\mathbb{A,F,L,2,3,5,\sigma}$.
+
+mathcal: $\mathcal{A,F,L,2,3,5,\sigma}$, mathscr: $\mathscr{A,F,L,2,3,5,\sigma}$, boldsymbol: $\boldsymbol{A,F,L,2,3,5,\sigma}$.
+
+vector: $\Vector{\sigma, T, a, F, n}$, unitvector: $\unitVector{\sigma, T, a, F, n}$
+
+matrix: $\Matrix{\sigma, T, a, F, n}$, unitmatrix: $\unitMatrix{\sigma, T, a, F, n}$
+
+tensor: $\Tensor{\sigma, T, a, F, n}$, unittensor: $\unitTensor{\sigma, T, a, F, n}$ 
+
+% \thispagestyle{appendixheader}
+\cleardoublepage[plain]
+}
