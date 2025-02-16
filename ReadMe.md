@@ -24,3 +24,7 @@
 - ucas: [*https://github.com/mohuangrui/ucasthesis*](https://github.com/mohuangrui/ucasthesis);
 - Timozer/CUGThesis: [*https://github.com/Timozer/CUGThesis*](https://github.com/Timozer/CUGThesis);
 - vscode+latex: [*https://zhuanlan.zhihu.com/p/38178015*](https://zhuanlan.zhihu.com/p/38178015).
+
+## 毕业论文格式
+
+官方链接：[*https://graduate.cug.edu.cn/info/1062/5671.htm*](https://graduate.cug.edu.cn/info/1062/5671.htm)
