@@ -37,23 +37,20 @@
 \mainmatter% initialize the environment
 
 \input{Tex/Mainmatter}% !!! MAIN CONTENT
+\cleardoublepage[plain]%
 
+% \backmatter% do not use \backmatter environment
+\input{Tex/Backmatter}% other information (Acknowledgments)
 \intotoc*{\cleardoublepage}{\bibname}% add link to toc
 \artxifstreq{\artxbib}{bibtex}{% enable bibtex
     \bibliography{Biblio/ref}% bibliography
 }{%
     \printbibliography% bibliography
 }
-
-\cleardoublepage[plain]%
-
+\cleardoublepage[plain]% end at even page;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  appendix %%%%%%%%%%%%%%
 % \appendix% initialize the environment
 % \input{Tex/Appendix}% appendix content
-
-\backmatter% initialize the environment
-\input{Tex/Backmatter}% other information
-
 \end{document}
 
 
