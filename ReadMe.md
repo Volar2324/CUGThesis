@@ -19,6 +19,13 @@
   
 若有 *符号列表* 或 *附录*, 或要添加 *图清单* 和 *表清单*, 将 `Thesis.tex` 文件中对应部分取消注释.
 
+## UPDATE
+
+- ***update on 2025/2/23***.
+  > 模板中默认使用 `algorithm` + `algorithmicx` + `algpseudocode` 来提供算法环境. 若需要使用 `algorithm2e` 宏包, 可注释掉 `Style/artratex.sty` 文件 `618` 行中提供的算法环境, 然后在 `Thesis.tex` 文件中自行导入.
+  >
+  > **NOTE**: 如果浮动体环境中使用了 `H` 参数, 则还需添加 `float` 包 (默认版本中 `algorithm` 包已经添加了 `float` 包依赖).
+
 ## 相关链接
 
 - ucas: [*https://github.com/mohuangrui/ucasthesis*](https://github.com/mohuangrui/ucasthesis);
