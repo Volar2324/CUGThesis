@@ -21,6 +21,15 @@
 
 ## UPDATE
 
+- ***update on 2025/3/3***.
+  > 若部分生僻字无法显示. 可以在 `documentclass` 中添加 `fontset` 配置.
+  > 更多设置问题可参考: [*https://github.com/mohuangrui/ucasthesis/wiki/字体配置*](https://github.com/mohuangrui/ucasthesis/wiki/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE).  
+  >
+  > ```latex
+  > % \documentclass[twoside]{Style/cugthesis}%
+  > \documentclass[twoside, fontset=windows]{Style/cugthesis}%
+  > ```
+
 - ***update on 2025/2/23***.
   > 模板中默认使用 `algorithm` + `algorithmicx` + `algpseudocode` 来提供算法环境. 若需要使用 `algorithm2e` 宏包, 可注释掉 `Style/artratex.sty` 文件 `618` 行中提供的算法环境, 然后在 `Thesis.tex` 文件中自行导入.
   >
