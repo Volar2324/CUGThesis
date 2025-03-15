@@ -231,6 +231,12 @@
 \newcommand{\studydateto}[1]{\def\cug@value@ch@studydateto{#1}}
 \def\cug@value@ch@date{}
 \renewcommand{\date}[2]{\def\cug@value@ch@date{\cugthesisdate{#1}{#2}}}
+
+%%% add name of school
+\def\cug@label@ch@schoolname{}
+\def\cug@label@ch@schoolnameWH{}
+\newcommand{\cugname}[2]{\def\cug@label@ch@schoolname{#1} \def\cug@label@ch@shoolnameWH{#2}}
+
 %-
 %-> English item commands
 %-
@@ -256,6 +262,13 @@
 \newcommand{\INSTITUTE}[1]{\def\cug@value@en@institute{#1}}
 \def\cug@value@en@school{}
 \newcommand{\SCHOOL}[1]{\def\cug@value@en@school{#1}}
+\def\cug@label@en@schoolname{}
+\newcommand{\CUGNAME}[1]{\def\cug@label@en@schoolname{#1}}
+\def\cug@label@en@schoolloc{}
+\newcommand{\CUGLOC}[1]{\def\cug@label@en@schoolloc{#1}}
+\def\cug@label@en@headersep{}
+\newcommand{\HEADERSEP}[1]{\def\cug@label@en@headersep{#1}}
+
 \def\cug@value@en@date{}
 \newcommand{\DATE}[1]{\def\cug@value@en@date{#1}}
 \def\cug@fixtable@length{5em}
@@ -351,7 +364,7 @@
 
         \def\arraystretch{1.5}
         \begin{tabular}{r@{\hskip 1em}l}
-            \makebox[\cug@fixtable@length][s]{\cug@label@ch@author}    & \cug@value@ch@author               \\
+            \makebox[\cug@fixtable@length][s]{\cug@label@ch@author}    & \makebox[7em][l]{\cug@value@ch@author}               \\
             \makebox[\cug@fixtable@length][s]{\cug@label@ch@major}     & \cug@value@ch@major                \\
             \makebox[\cug@fixtable@length][s]{\cug@label@ch@advisor}   & \cuglntotab{\cug@value@ch@advisor} \\
             \makebox[\cug@fixtable@length][s]{\cug@label@ch@institute} & \cug@value@ch@institute            \\
@@ -471,7 +484,7 @@
 
         \def\arraystretch{1.5}
         \begin{tabular}{r@{\hskip 1em}l}
-            \cug@label@en@author  & \cug@value@en@author               \\
+            \cug@label@en@author  & \makebox[10em][l]{\cug@value@en@author}              \\
             \cug@label@en@major   & \cug@value@en@major                \\
             \cug@label@en@advisor & \cuglntotab{\cug@value@en@advisor} \\
         \end{tabular}

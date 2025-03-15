@@ -734,7 +734,7 @@
 	\fancypagestyle{mainmatterstyle}{%
 		\pagestyle{fancy}
 		\fancyhf{}
-		\fancyhead[C]{\footnotesize \ifnumodd{\value{page}}{\phantom{\thepage}\hspace*{\fill} \cug@label@ch@schoolname\cug@label@ch@thesis\hspace*{\fill}\thepage}{\thepage\hspace*{\fill}\cug@value@ch@author: \@title\hspace*{\fill}\phantom{\thepage}}}
+		\fancyhead[C]{\footnotesize \ifnumodd{\value{page}}{\phantom{\thepage}\hspace*{\fill} \cug@label@ch@schoolname\cug@label@ch@thesis\hspace*{\fill}\thepage}{\thepage\hspace*{\fill}\cug@value@ch@author \cug@label@en@headersep \@title\hspace*{\fill}\phantom{\thepage}}}
 		\renewcommand{\headrulewidth}{0.5pt}
 		\renewcommand{\footrulewidth}{0pt}% footer rule
 	}
