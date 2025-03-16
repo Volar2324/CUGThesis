@@ -1,0 +1,30 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Cheng et~al.(2023)Cheng, Hu, and Li]{journal}
+Cheng A, Hu G, Li W~V.
+\newblock Benchmarking cell-type clustering methods for spatially resolved transcriptomics data\allowbreak[J].
+\newblock Briefings in Bioinformatics, 2023, 24\allowbreak (1): bbac475.
+
+\bibitem[Pons et~al.(2005)Pons and Latapy]{inproceedings}
+Pons P, Latapy M.
+\newblock Computing communities in large networks using random walks\allowbreak[C].\
+International Symposium on Computer and Information Sciences.
+\newblock 2005: 284-293.
+
+\bibitem[周志华(2016)]{book}
+周志华.
+\newblock 机器学习\allowbreak[M].
+\newblock 北京: 清华大学出版社, 2016.
+
+\end{thebibliography}
