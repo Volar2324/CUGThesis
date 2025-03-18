@@ -630,7 +630,7 @@
         \vspace*{16.5mm}
 
         \begin{center}
-            {\linespread{\customonequarterline}\zihao{3}\sffamily \cug@label@ch@schoolnameWH 研究生学位论文使用授权书\par}
+            {\linespread{\customonequarterline}\zihao{3}\sffamily \cug@label@ch@schoolnameWH 学位论文使用授权书\par}
         \end{center}
 
         \vspace*{6mm}

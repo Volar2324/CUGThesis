@@ -21,6 +21,9 @@
 
 ## UPDATE
 
+- :warning: :warning: :warning: ***update on 2025/3/18***.
+  > :exclamation: 修改 「研究生学位论文使用授权书」为「学位论文使用授权书」
+
 - ***update on 2025/3/15***.
   > 将盲审需要删除内容全部移到 `Frontinfo.tex` 中, 注释对应内容可以得到盲审版本.
 
