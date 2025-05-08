@@ -235,7 +235,7 @@
 %%% add name of school
 \def\cug@label@ch@schoolname{}
 \def\cug@label@ch@schoolnameWH{}
-\newcommand{\cugname}[2]{\def\cug@label@ch@schoolname{#1} \def\cug@label@ch@shoolnameWH{#2}}
+\newcommand{\cugname}[2]{\def\cug@label@ch@schoolname{#1} \def\cug@label@ch@schoolnameWH{#2}}
 
 %-
 %-> English item commands
