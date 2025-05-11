@@ -235,7 +235,7 @@
 %%% add name of school
 \def\cug@label@ch@schoolname{}
 \def\cug@label@ch@schoolnameWH{}
-\newcommand{\cugname}[2]{\def\cug@label@ch@schoolname{#1} \def\cug@label@ch@shoolnameWH{#2}}
+\newcommand{\cugname}[2]{\def\cug@label@ch@schoolname{#1} \def\cug@label@ch@schoolnameWH{#2}}
 
 %-
 %-> English item commands
@@ -364,10 +364,10 @@
 
         \def\arraystretch{1.5}
         \begin{tabular}{r@{\hskip 1em}l}
-            \makebox[\cug@fixtable@length][s]{\cug@label@ch@author}    & \makebox[7em][l]{\cug@value@ch@author}               \\
-            \makebox[\cug@fixtable@length][s]{\cug@label@ch@major}     & \cug@value@ch@major                \\
-            \makebox[\cug@fixtable@length][s]{\cug@label@ch@advisor}   & \cuglntotab{\cug@value@ch@advisor} \\
-            \makebox[\cug@fixtable@length][s]{\cug@label@ch@institute} & \cug@value@ch@institute            \\
+            \makebox[\cug@fixtable@length][s]{\cug@label@ch@author}    & \makebox[7em][l]{\cug@value@ch@author} \\
+            \makebox[\cug@fixtable@length][s]{\cug@label@ch@major}     & \cug@value@ch@major                    \\
+            \makebox[\cug@fixtable@length][s]{\cug@label@ch@advisor}   & \cuglntotab{\cug@value@ch@advisor}     \\
+            \makebox[\cug@fixtable@length][s]{\cug@label@ch@institute} & \cug@value@ch@institute                \\
         \end{tabular}
 
         \vspace*{\stretch{4}}
@@ -484,9 +484,9 @@
 
         \def\arraystretch{1.5}
         \begin{tabular}{r@{\hskip 1em}l}
-            \cug@label@en@author  & \makebox[10em][l]{\cug@value@en@author}              \\
-            \cug@label@en@major   & \cug@value@en@major                \\
-            \cug@label@en@advisor & \cuglntotab{\cug@value@en@advisor} \\
+            \cug@label@en@author  & \makebox[10em][l]{\cug@value@en@author} \\
+            \cug@label@en@major   & \cug@value@en@major                     \\
+            \cug@label@en@advisor & \cuglntotab{\cug@value@en@advisor}      \\
         \end{tabular}
 
         \vspace*{\stretch{4}}
@@ -608,7 +608,7 @@
         \vspace*{15mm}
 
         {\linespread{2}\zihao{4}
-            {\hfill{} {指导老师（签字）：\ulenhance[0.5pt]{\qquad\qquad\quad}}}
+            {\hfill{} {指导教师（签字）：\ulenhance[0.5pt]{\qquad\qquad\quad}}}
 
             {\hfill{} {日\quad 期：\hspace*{2.2em} 年\qquad 月\qquad 日}}\par}
 
@@ -630,7 +630,7 @@
         \vspace*{16.5mm}
 
         \begin{center}
-            {\linespread{\customonequarterline}\zihao{3}\sffamily \cug@label@ch@schoolnameWH 研究生学位论文使用授权书\par}
+            {\linespread{\customonequarterline}\zihao{3}\sffamily \cug@label@ch@schoolnameWH 学位论文使用授权书\par}
         \end{center}
 
         \vspace*{6mm}
@@ -686,6 +686,8 @@
     \def\lemmaname{\cug@label@en@lemmaname}
     \def\corollaryname{\cug@label@en@corollaryname}
     \def\assertionname{\cug@label@en@assertionname}
+    \def\assumptionname{\cug@label@en@assumptionname}
+\def\conditionname{\cug@label@en@conditionname}
     \def\propositionname{\cug@label@en@propositionname}
     \def\conjecturename{\cug@label@en@conjecturename}
     \def\definitionname{\cug@label@en@definitionname}
@@ -710,6 +712,8 @@
     \def\lemmaname{\cug@label@ch@lemmaname}
     \def\corollaryname{\cug@label@ch@corollaryname}
     \def\assertionname{\cug@label@ch@assertionname}
+    \def\assumptionname{\cug@label@ch@assumptionname}
+\def\conditionname{\cug@label@ch@conditionname}
     \def\propositionname{\cug@label@ch@propositionname}
     \def\conjecturename{\cug@label@ch@conjecturename}
     \def\definitionname{\cug@label@ch@definitionname}
@@ -821,6 +825,7 @@
 \RequirePackage{tocloft}
 \setlength{\cftbeforetoctitleskip}{0pt}   % space above title, (set a negative value to decrease the indent)
 \setlength{\cftaftertoctitleskip}{10pt}
+% \renewcommand{\cfttoctitlefont}{\hfill\sffamily\hfill} % set fontsize to -2
 \renewcommand{\cftaftertoctitle}{\thispagestyle{empty}} % set header of toc to empty
 
 \setlength{\cftbeforeloftitleskip}{20pt}   % space above listoffigure, (set a negative value to decrease the indent)
@@ -835,7 +840,9 @@
 \renewcommand{\listtablename}{表清单}
 \renewcommand{\cftafterlottitle}{\hfill}
 
-\renewcommand{\contentsname}{\zihao{3}\bfseries\sffamily\cug@label@ch@tocname}
+\renewcommand{\contentsname}{\begin{center}
+    \zihao{3}\bfseries\sffamily\cug@label@ch@tocname
+\end{center} }
 \newcommand{\contenttobmk}{
     \intobmk*{\cleardoublepage}{\cug@label@ch@tocname}% add link to bookmark
 }

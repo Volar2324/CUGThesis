@@ -21,6 +21,12 @@
 
 ## UPDATE
 
+- ***update on 2025/6/09***.
+  > 若要加粗目录中的 `chapter`, 在 `cugthesis.cls` 文件第 906 行末尾添加 `\bfseries`
+
+- ***update on 2025/5/11***.
+  > 若不需要 `关键词` (`Key Words`) 缩进，在 `Style/cugthesis.cls` 中搜索 `\keywords` (`\KEYWORDS`)，删除对应的 `\noindent`
+
 - ***update on 2025/3/15***.
   > 将盲审需要删除内容全部移到 `Frontinfo.tex` 中, 注释对应内容可以得到盲审版本.
 
