@@ -237,6 +237,32 @@
 \def\cug@label@ch@schoolnameWH{}
 \newcommand{\cugname}[2]{\def\cug@label@ch@schoolname{#1} \def\cug@label@ch@schoolnameWH{#2}}
 
+
+%%% add table of defense committee
+\def\cugdefensechairman{}
+\def\cugdefensemembers{}
+\def\cugdefensesecretary{}
+\newcommand{\cugchairman}[3][\cug@label@ch@schoolnameWH]{\def\cugdefensechairman{#2 & #3 & #1}}
+\newcommand{\addcugmembers}[3][\cug@label@ch@schoolnameWH]{\edef\cugdefensemembers{
+        \cugdefensemembers
+        & #2 & #3 & #1 \\
+    }}
+\newcommand{\cugsecretary}[3][\cug@label@ch@schoolnameWH]{\def\cugdefensesecretary{#2  & #3 & #1}}
+\newcommand{\cugmakedefensecommittee}{
+    \begin{center}
+        \vspace*{0.5cm}
+        {\zihao{-2}\bfseries\rmfamily {学位论文答辩委员会名单}}
+        \vspace*{1.5cm}
+
+        \def\arraystretch{1.5}
+        \zihao{4}
+        \begin{tabular}{l@{\hskip 1.5em}l@{\hskip 1.5em}l@{\hskip 1.5em}l}
+            主~席 & \cugdefensechairman  \\
+            委~员  \cugdefensemembers
+            秘~书 & \cugdefensesecretary \\
+        \end{tabular}
+    \end{center}
+}
 %-
 %-> English item commands
 %-
@@ -687,7 +713,7 @@
     \def\corollaryname{\cug@label@en@corollaryname}
     \def\assertionname{\cug@label@en@assertionname}
     \def\assumptionname{\cug@label@en@assumptionname}
-\def\conditionname{\cug@label@en@conditionname}
+    \def\conditionname{\cug@label@en@conditionname}
     \def\propositionname{\cug@label@en@propositionname}
     \def\conjecturename{\cug@label@en@conjecturename}
     \def\definitionname{\cug@label@en@definitionname}
@@ -713,7 +739,7 @@
     \def\corollaryname{\cug@label@ch@corollaryname}
     \def\assertionname{\cug@label@ch@assertionname}
     \def\assumptionname{\cug@label@ch@assumptionname}
-\def\conditionname{\cug@label@ch@conditionname}
+    \def\conditionname{\cug@label@ch@conditionname}
     \def\propositionname{\cug@label@ch@propositionname}
     \def\conjecturename{\cug@label@ch@conjecturename}
     \def\definitionname{\cug@label@ch@definitionname}
@@ -841,8 +867,8 @@
 \renewcommand{\cftafterlottitle}{\hfill}
 
 \renewcommand{\contentsname}{\begin{center}
-    \zihao{3}\bfseries\sffamily\cug@label@ch@tocname
-\end{center} }
+        \zihao{3}\bfseries\sffamily\cug@label@ch@tocname
+    \end{center} }
 \newcommand{\contenttobmk}{
     \intobmk*{\cleardoublepage}{\cug@label@ch@tocname}% add link to bookmark
 }

@@ -21,6 +21,9 @@
 
 ## UPDATE
 
+- ***update on 2025/6/10***.
+  > 添加 `学位答辩委员会名单` 页 (i.e. `Tex/Defense.tex`)
+
 - ***update on 2025/6/09***.
   > 若要加粗目录中的 `chapter`, 在 `cugthesis.cls` 文件第 906 行末尾添加 `\bfseries`
 
